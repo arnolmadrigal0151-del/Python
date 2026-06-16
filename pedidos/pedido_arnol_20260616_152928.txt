@@ -1,0 +1,16 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 15:29:28
+Cliente:   arnol
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza Individual de Carnes Frías (Con: Pepperoni, Tocino, Cebolla) ($139)
+ - 1x Dip Mango Habanero ($25)
+---------------------------------------
+TOTAL A COBRAR: $164
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

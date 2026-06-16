@@ -1,0 +1,15 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 14:27:35
+Cliente:   yogui
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza 30 CM de Hawaiana ($239)
+---------------------------------------
+TOTAL A COBRAR: $239
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

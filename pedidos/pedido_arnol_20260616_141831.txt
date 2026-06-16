@@ -1,0 +1,18 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 14:18:31
+Cliente:   arnol
+Teléfono:  3329893703
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza 30 CM de Carnes Frías (Con: Tocino, Cebolla) ($239)
+ - 1x Pizza 30 CM de Especial (Con: Tocino, Cebolla) ($239)
+ - 1x Coca-Cola Original ($30)
+ - 1x Coca-Cola Zero ($30)
+---------------------------------------
+TOTAL A COBRAR: $538
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

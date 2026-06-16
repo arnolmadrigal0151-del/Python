@@ -1,0 +1,20 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 16:04:12
+Cliente:   arnol
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza Individual de Hawaiana (CON EXTRA: Pepperoni) ($139)
+ - 1x Pizza 30 CM de Carnes Frías (CON EXTRA: Tocino, Cebolla, Pepperoni) (+ QUESO EXTRA 🧀) ($269)
+ - 3x Dip Mango Habanero ($75)
+ - 1x Aderezo Chimichurri Botella ($60)
+ - 4x Coca-Cola Original ($120)
+ - 1x Micro Pizza (Máx 2 ing) de Veneciana ($45)
+---------------------------------------
+TOTAL A COBRAR: $708
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

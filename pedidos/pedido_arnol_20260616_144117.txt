@@ -1,0 +1,17 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 14:41:17
+Cliente:   arnol
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 2x Micro Pizza (Máx 2 ing) de ¡Arma tu Pizza! (Personalizada) (Con: Pepperoni, Carne Molida) ($90)
+ - 1x Dip Chimichurri Chico ($25)
+ - 2x Dip Mango Habanero ($50)
+---------------------------------------
+TOTAL A COBRAR: $165
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

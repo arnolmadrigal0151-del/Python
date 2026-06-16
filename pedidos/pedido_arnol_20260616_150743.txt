@@ -1,0 +1,15 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 15:07:43
+Cliente:   arnol
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 5x Pizza Individual de Especial (Con: Pepperoni) ($695)
+---------------------------------------
+TOTAL A COBRAR: $695
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

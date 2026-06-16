@@ -1,0 +1,20 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 15:51:57
+Cliente:   arnol
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza Individual de Italiana (SIN: Piña) (CON EXTRA: Pepperoni, Tocino, Cebolla) ($139)
+ - 1x Pizza 30 CM de Especial (SIN: Champiñón, Piña) (CON EXTRA: Tocino, Cebolla, Pepperoni) ($239)
+ - 1x Pizza Individual de Especial ($139)
+ - 1x Pizza 30 CM de ¡Arma tu Pizza! (Personalizada) (Con: Pepperoni, Salchicha, Carne Molida, Tocino, Cebolla) ($239)
+ - 4x Dip Mango Habanero ($100)
+ - 1x Aderezo Chimichurri Botella ($60)
+---------------------------------------
+TOTAL A COBRAR: $916
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

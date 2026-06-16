@@ -1,0 +1,16 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 16:13:40
+Cliente:   arnol 
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+Notas Obs: agregar el queso extra antes de los ingredientes y el tocino arriba del queso porfa
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza 30 CM de Carnes Frías (CON EXTRA: Pepperoni, Tocino, Cebolla) (+ QUESO EXTRA 🧀) ($269)
+---------------------------------------
+TOTAL A COBRAR: $269
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================

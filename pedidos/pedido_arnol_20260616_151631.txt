@@ -1,0 +1,16 @@
+=======================================
+         TICKET DE PEDIDO ONLINE       
+=======================================
+Fecha/Hora: 2026-06-16 15:16:31
+Cliente:   arnol
+Teléfono:  12
+Entrega:   Para recoger en Sucursal 🏪
+---------------------------------------
+Detalle del pedido:
+ - 1x Pizza Individual de Hawaiana ($139)
+ - 1x Pizza 30 CM de Carnes Frías (Con: Pepperoni, Tocino, Cebolla) ($239)
+---------------------------------------
+TOTAL A COBRAR: $378
+=======================================
+   ¡Pedido listo para mandar a cocina! 
+=======================================
