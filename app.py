@@ -339,31 +339,28 @@ if st.button("🚀 ENVIAR MI PEDIDO COMPLETO", use_container_width=True, type="p
 💰 *TOTAL NETO A COBRAR:* ${total_general} MXN
 """
 
-        # 3. Código mágico: Codificar el texto para que lo entienda un enlace web
+        # 3. Codificar el texto para que lo entienda un enlace web de WhatsApp
         texto_codificado = urllib.parse.quote(mensaje_whatsapp)
-        
-        # 🚨 TU NÚMERO DE TELÉFONO AQUÍ 🚨
-        # Reemplaza el 523300000000 por tu número real (incluyendo el código de país, ej. 52 para México)
-        numero_pizzeria = "523342761208" 
-        
+        numero_pizzeria = "523342761208"  # Código de país + Tu número configurado
         enlace_wa = f"https://wa.me/{numero_pizzeria}?text={texto_codificado}"
 
-        # 4. Mostrar éxito en pantalla y dar el botón de redirección inmediata
+        # 4. Mostrar el estado de éxito en la aplicación web
         st.success(f"🎉 ¡Ticket generado con éxito, {nombre_cliente.upper()}!")
         
-        # Botón dinámico que abre el chat de WhatsApp en una pestaña nueva
+        # 5. BOTÓN ENLACE: Abre el chat de WhatsApp del negocio con el mensaje listo
         st.link_button("📲 ABRIR WHATSAPP PARA CONFIRMAR TU PEDIDO", enlace_wa, use_container_width=True)
 
-        # Dejar el resumen visual en pantalla por si acaso
-        st.info(f"""
-        **RESUMEN DEL TICKET GENERADO:**
-        * **Cliente:** {nombre_cliente} ({telefono})
-        ---
-        **🍕 PIZZAS ORDENADAS:**{resumen_pizzas_txt if resumen_pizzas_txt else ' (Ninguna)'}
-        ---
-        * **🥤 Bebidas Seleccionadas:** {texto_bebidas}
-        * **🍯 Aderezos Seleccionados:** {texto_aderezos}
-        * **✍️ Notas Especiales:** {notas_pedido if notas_pedido else 'Ninguna'}
-        ---
-        * **💰 Total Neto a Cobrar:** ${total_general} MXN
-        """)
+        # 6. Resumen en pantalla limpio en formato de bloque expandible (por si quieren verificar algo)
+        with st.expander("📄 Ver detalles del ticket generado", expanded=True):
+            st.markdown(f"""
+            **👤 Cliente:** {nombre_cliente} ({telefono})  
+            ---
+            **🍕 PIZZAS ORDENADAS:** {resumen_pizzas_txt if resumen_pizzas_txt else ' (Ninguna)'}  
+            ---
+            **🥤 Bebidas:** {texto_bebidas}  
+            **🍯 Aderezos:** {texto_aderezos}  
+            **✍️ Notas Especiales:** {notas_pedido if notas_pedido else 'Ninguna'}  
+            ---
+            ### 💰 Total a Cobrar: :green[${total_general} MXN]
+            """)
+            
