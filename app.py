@@ -344,7 +344,7 @@ if st.button("🚀 ENVIAR MI PEDIDO COMPLETO", use_container_width=True, type="p
         
         # 🚨 TU NÚMERO DE TELÉFONO AQUÍ 🚨
         # Reemplaza el 523300000000 por tu número real (incluyendo el código de país, ej. 52 para México)
-        numero_pizzeria = "523300000000" 
+        numero_pizzeria = "523342761208" 
         
         enlace_wa = f"https://wa.me/{numero_pizzeria}?text={texto_codificado}"
 
