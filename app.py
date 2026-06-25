@@ -1,5 +1,6 @@
 try:
     import streamlit as st
+    import urllib.parse  # 👈 Ponla justo aquí
 except Exception:
     # Fallback stub for environments where streamlit is not installed
     class _DummySessionState(dict):
@@ -311,13 +312,11 @@ if st.button("🚀 ENVIAR MI PEDIDO COMPLETO", use_container_width=True, type="p
     elif not st.session_state.carrito and not bebidas_pedido and not aderezos_pedido:
         st.error("⚠️ Tu carrito está vacío. Agrega una pizza o un complemento antes de enviar.")
     else:
-        st.success(f"🎉 ¡Tu pedido ha sido enviado con éxito a la cocina, {nombre_cliente.upper()}!")
-        
-        # Generar desglose en el bloque informativo
+        # 1. Generar el desglose del texto para la pantalla y para WhatsApp
         resumen_pizzas_txt = ""
         for p in st.session_state.carrito:
             modificaciones = " (CON QUESO EXTRA 🧀)" if p['queso_extra'] else ""
-            resumen_pizzas_txt += f"\n        * 1x {p['tamano']} de {p['especialidad']}{modificaciones}\n          └─ {p['resumen_visual']} -> ${p['precio']} MXN"
+            resumen_pizzas_txt += f"\n* 1x {p['tamano']} de {p['especialidad']}{modificaciones}\n  └─ {p['resumen_visual']} -> ${p['precio']} MXN"
 
         lista_bebidas_txt = [f"{cant}x {bebida}" for bebida, cant in bebidas_pedido.items()]
         texto_bebidas = ", ".join(lista_bebidas_txt) if lista_bebidas_txt else "Ninguna"
@@ -325,8 +324,39 @@ if st.button("🚀 ENVIAR MI PEDIDO COMPLETO", use_container_width=True, type="p
         lista_aderezos_txt = [f"{cant}x {aderezo}" for aderezo, cant in aderezos_pedido.items()]
         texto_aderezos = ", ".join(lista_aderezos_txt) if lista_aderezos_txt else "Ninguno"
 
+        # 2. Armar el mensaje de texto limpio y formateado con negritas para WhatsApp
+        mensaje_whatsapp = f"""🍕 *NUEVO PEDIDO - ULISES PIZZAS* 🍕
+--------------------------------
+👤 *Cliente:* {nombre_cliente}
+📞 *Teléfono:* {telefono}
+--------------------------------
+🍕 *PIZZAS ORDENADAS:* {resumen_pizzas_txt if resumen_pizzas_txt else ' (Ninguna)'}
+--------------------------------
+🥤 *Bebidas:* {texto_bebidas}
+🍯 *Aderezos:* {texto_aderezos}
+✍️ *Notas de Cocina:* {notas_pedido if notas_pedido else 'Ninguna'}
+--------------------------------
+💰 *TOTAL NETO A COBRAR:* ${total_general} MXN
+"""
+
+        # 3. Código mágico: Codificar el texto para que lo entienda un enlace web
+        texto_codificado = urllib.parse.quote(mensaje_whatsapp)
+        
+        # 🚨 TU NÚMERO DE TELÉFONO AQUÍ 🚨
+        # Reemplaza el 523300000000 por tu número real (incluyendo el código de país, ej. 52 para México)
+        numero_pizzeria = "523300000000" 
+        
+        enlace_wa = f"https://wa.me/{numero_pizzeria}?text={texto_codificado}"
+
+        # 4. Mostrar éxito en pantalla y dar el botón de redirección inmediata
+        st.success(f"🎉 ¡Ticket generado con éxito, {nombre_cliente.upper()}!")
+        
+        # Botón dinámico que abre el chat de WhatsApp en una pestaña nueva
+        st.link_button("📲 ABRIR WHATSAPP PARA CONFIRMAR TU PEDIDO", enlace_wa, use_container_width=True)
+
+        # Dejar el resumen visual en pantalla por si acaso
         st.info(f"""
-        **RESUMEN DEL TICKET ENVIADO A COCINA:**
+        **RESUMEN DEL TICKET GENERADO:**
         * **Cliente:** {nombre_cliente} ({telefono})
         ---
         **🍕 PIZZAS ORDENADAS:**{resumen_pizzas_txt if resumen_pizzas_txt else ' (Ninguna)'}
@@ -337,4 +367,3 @@ if st.button("🚀 ENVIAR MI PEDIDO COMPLETO", use_container_width=True, type="p
         ---
         * **💰 Total Neto a Cobrar:** ${total_general} MXN
         """)
-        
