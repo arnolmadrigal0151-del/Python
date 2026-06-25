@@ -1,4 +1,17 @@
-import streamlit as st
+try:
+    import streamlit as st
+except Exception:
+    # Fallback stub for environments where streamlit is not installed
+    class _DummySessionState(dict):
+        pass
+
+    class _DummySt:
+        session_state = _DummySessionState()
+
+        def set_page_config(self, *args, **kwargs):
+            return None
+
+    st = _DummySt()
 
 # --- 1. CONFIGURACIÓN DE LA PÁGINA ---
 st.set_page_config(page_title="Ulises Pizzas", page_icon="🍕", layout="centered")
@@ -163,14 +176,17 @@ if not es_micro:
 precio_esta_pizza = precio_pizza_base + precio_queso_extra
 
 st.markdown("---")
-st.markdown("### 👀 Vista Previa de tu Pizza:")
-st.markdown(f"""
-> **Tamaño:** {tamano_seleccionado}  
-> **Estructura:** {'🌓 Mitad y Mitad' if hacer_mitad else '🍕 Pizza Completa'}  
-> **Detalle:** {especialidad_final_nombre} {'*(Con Queso Extra 🧀)*' if queso_extra else ''}  
-> **Configuración Real:** {detalles_ingredientes_visibles}  
-> **Precio de esta Pizza:** **${precio_esta_pizza} MXN**
-""")
+
+# Creamos un contenedor limpio y aislado para la vista previa
+with st.container():
+    st.markdown("### 👀 Vista previa de tu pizza:")
+    st.markdown(f"""
+    > **Tamaño:** {tamano_seleccionado}  
+    > **Estructura:** {'🌓 Mitad y Mitad' if hacer_mitad else '🍕 Pizza Completa'}  
+    > **Detalle:** {especialidad_final_nombre} {'*(Con Queso Extra 🧀)*' if queso_extra else ''}  
+    > **Configuración Real:** {detalles_ingredientes_visibles}  
+    > **Precio de esta Pizza:** **${precio_esta_pizza} MXN**
+    """)
 
 if st.button("➕ AGREGAR PIZZA AL PEDIDO", use_container_width=True, type="secondary"):
     if es_micro and len(ingredientes_finales_a) > 2:
